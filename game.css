@@ -4,6 +4,7 @@
 }
 
 body {
+    user-select:none;
     overflow: hidden;
     position: relative;
     font-family: 'open sans', 'sans-serif';
