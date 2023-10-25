@@ -1,46 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="game.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="game.css" />
     <title>Typing Speed Game</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="game">
-        <div class="name">Typing speed test game </div>
-        <div class="container">
-            <div class="msg">
-                You are playing on
-                <span class="lvl"></span>Level & You Have <span class="seconds"></span>
-                second to type the word
-            </div>
-            <div class="levels">
-                <span data-level="Easy" class="active">Easy</span>
-                <span data-level="Normal">Normal</span>
-                <span data-level="Hard">Hard</span>
-            </div>
-            <div class="start-play">start playing</div>
-
-            <div class="the-word">
-                The word will appear after Click on <b>" start playing"</b>
-                <span> </span>
-            </div>
-            <input type="text" class="input" placeholder="Type Quickly">
-            <div class="upcoming-word">
-                Upcoming Words will appear here
-            </div>
-            <div class="control">
-                <div class="time">Time left: <span></span> seconds</div>
-                <div class="score">Score: <span class="got">0</span> From <span class="total"></span></div>
-            </div>
-            <div class="finsh"></div>
+      <div class="name">Typing speed test game</div>
+      <div class="container">
+        <div class="msg">
+          You are playing on
+          <span class="lvl"></span>Level & You Have
+          <span class="seconds"></span>
+          second to type the word
         </div>
+        <div class="levels">
+          <span data-level="Easy" class="active">Easy</span>
+          <span data-level="Normal">Normal</span>
+          <span data-level="Hard">Hard</span>
+        </div>
+        <div class="start-play">start playing</div>
+
+        <div class="the-word">
+          <p>
+            The word will appear after Click on <b>" start playing "</b> or
+            <b>" Enter "</b> key
+          </p>
+        </div>
+        <input type="text" class="input" placeholder="Type Quickly" />
+        <div class="upcoming-word">Upcoming Words will appear here</div>
+        <div class="control">
+          <div class="time">Time left: <span></span> seconds</div>
+          <div class="lastScore">
+            <span></span>
+          </div>
+          <div class="score">
+            Score: <span class="got">0</span> From <span class="total"></span>
+          </div>
+        </div>
+        <div class="finsh"></div>
+      </div>
     </div>
     <script src="main.js"></script>
-</body>
-
+  </body>
 </html>

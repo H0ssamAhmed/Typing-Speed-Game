@@ -92,6 +92,11 @@ let leftTime = document.querySelector(".time span");
 let gotScore = document.querySelector(".score .got");
 let totalScore = document.querySelector(".score .total");
 let finsh = document.querySelector(".finsh");
+let lastScore = document.querySelector(".lastScore span");
+
+if (localStorage.getItem("Score")) {
+  lastScore.innerHTML = `score of last game is ${JSON.parse(localStorage.getItem("Score"))["Last Score"]}`
+} else lastScore.innerHTML = "First Game Let's Go"
 
 // Setting Levels
 const lvls = {
@@ -115,13 +120,22 @@ input.onpaste = function () {
   return false;
 };
 
+
 // The Click To Start
-startBtn.onclick = function start() {
-  this.remove();
+function startGame(e) {
   input.value = "";
   input.focus();
   geneWord();
-};
+}
+window.addEventListener('keyup', (event) => {
+  if (event.key == "Enter") {
+    startGame()
+  } else ''
+})
+
+startBtn.addEventListener('click', () => {
+  startGame()
+})
 
 // Selec level and add class to taget
 selectlevel.forEach((li) => {
