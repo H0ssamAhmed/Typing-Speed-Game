@@ -96,7 +96,7 @@ let lastScore = document.querySelector(".lastScore span");
 
 if (localStorage.getItem("Score")) {
   lastScore.innerHTML = `score of last game is ${JSON.parse(localStorage.getItem("Score"))["Last Score"]}`
-} else lastScore.innerHTML = "First Game Let's Go"
+} else lastScore.innerHTML = "First Game? Let's Go"
 
 // Setting Levels
 const lvls = {
